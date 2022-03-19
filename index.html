@@ -18,10 +18,11 @@
             </h1>
         </div>
     </header>
-    <div class="tile is-ancestor mx-2 my-2 px-2">
+    <!--Search for City-->
+    <section class="tile is-ancestor mx-2 my-2 px-2">
         <div class="tile is-3 is-parent has-text-centered">
             <article class="tile is-child box">
-                <form class="field">
+                <form class="field city-search">
                     <label class="label">Search for a City</label>
                     <div class="control">
                         <input class="input has-text-centered" type="text" placeholder="City Name">
@@ -29,8 +30,44 @@
                     </div>
                 </form>
             </article>
+            <!--search history populates-->
+            <form id="history"></form>
         </div>
-    </div>
+        <!--Current city conditions-->
+        <div class="tile is-parent container is-3 is-vertical mx-3 my-2">
+            <article class="tile is-child box has-text-centered">
+                <p class="title city-name">City:</p>
+                <p class="current-date"></p>
+                <span class="current-icon"></span>
+                <p class="temperature"></p>
+                <p class="humidity"></p>
+                <p class="wind-speed"></p>
+                <p class="UV-index"></p>
+            </article>
+        </div>
+    </section>
+     <!-- Five Day Forecast -->
+    <section class="tile is-ancestor box my-6">
+        <div class="tile is-parent is-12 container px-6 py-6">
+            <div class="tile is-child card box">
+                <div class="content forecast"></div>
+            </div>
+            <div class="tile is-child card box">
+                <div class="content forecast"></div>
+            </div>
+            <div class="tile is-child card box">
+                <div class="content forecast"></div>
+            </div>
+            <div class="tile is-child card box">
+                <div class="content forecast"></div>
+            </div>
+            <div class="tile is-child card box">
+                <div class="content forecast"></div>
+            </div>
+        </div>
+
+    </section>
+
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
