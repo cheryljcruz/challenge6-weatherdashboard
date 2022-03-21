@@ -1,6 +1,14 @@
+// search form and input
 var cityForm = document.querySelector(".city-search-form");
 var cityInput = document.querySelector(".search-city");
+// current city weather info
 var currentCity = document.querySelector(".current-city-name");
+var currentIcon = document.querySelector(".current-icon");
+var currentDate = document.querySelector(".current-date");
+var currentTemp = document.querySelector(".current-temperature")
+var currentHumidity= document.querySelector(".current-humidity");
+var currentWind = document.querySelector(".current-wind-speed");
+var currentUV = document.querySelector(".current-uv-index");
 
 
 
@@ -11,20 +19,29 @@ var getWeather = function (cityName) {
     // make a get request to url
     fetch(apiUrl)
         .then(function (response) {
-            response.json().then(function (data) {
-                console.log(data, cityName);
-                var lon = data[0].lon;
-                var lat = data[0].lat;
-                //display city / weather
-                var todayName = data[0].name;
-                currentCity.textContent = todayName;
-                console.log(data);
+            response.json()
+                .then(function (data) {
+                    console.log(data, cityName);
+                    var lon = data[0].lon;
+                    var lat = data[0].lat;
+                    //display city / weather
+                    var todayName = data[0].name;
+                    currentCity.textContent = todayName;
+                    console.log(data);
 
-                //format second api url
-                var apiUrlTwo = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly,alerts&appid=7570d2477f6e5e833116781b24b1cf5c&units=imperial";
-                
+                    //format second api url
+                    var apiUrlTwo = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly,alerts&appid=7570d2477f6e5e833116781b24b1cf5c&units=imperial";
+                    fetch(apiUrlTwo)
+                        .then(function (response) {
+                            response.json()
+                                .then(function (data) {
+                                    console.log(data);
+                                    currentWeather(data);
 
-            });
+                                })
+                        })
+
+                });
 
         });
 
@@ -45,6 +62,11 @@ var formSubmitHandler = function (event) {
         alert("Please enter a city");
     }
 };
+
+var currentWeather = function (data) {
+    var currentTemperature = data.current.temp;
+    currentTemp.textContent= currentTemperature;
+}
 
 
 

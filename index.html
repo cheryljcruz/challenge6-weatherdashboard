@@ -31,37 +31,64 @@
                 </form>
             </article>
             <!--search history populates-->
-            <form id="history"></form>
+            <form id="history">
+                <div class="container search-history-one"></div>
+                <div class="container search-history-two"></div>
+                <div class="container search-history-three"></div>
+                <div class="container search-history-four"></div>
+                <div class="container search-history-five"></div>
+            </form>
         </div>
         <!--Current city conditions-->
-        <div class="tile is-parent container is-3 is-vertical mx-3 my-2">
+        <div class="tile is-parent container current-weather is-3 is-vertical mx-3 my-2">
             <article class="tile is-child box has-text-centered">
-                <p class="title current-city-name">City:</p>
-                <p class="current-date"></p>
+                <p class="title current-city-name"></p>
+
+                <p>
+                <div class="current-date"></div>
+                </p>
+
                 <span class="current-icon"></span>
-                <p class="temperature"></p>
-                <p class="humidity"></p>
-                <p class="wind-speed"></p>
-                <p class="UV-index"></p>
+
+                <p>Temperature:
+                <div class="current-temperature"></div>
+                </p>
+
+                <p>Humidity:
+                <div class="current-humidity"></div>
+                </p>
+
+                <p>Wind speed:
+                <div class="current-wind-speed"></div>
+                </p>
+
+                <p>UV index:
+                <div class="current-uv-index"></div>
+                </p>
             </article>
         </div>
     </section>
-     <!-- Five Day Forecast -->
+    <!-- Five Day Forecast -->
     <section class="tile is-ancestor box my-6">
         <div class="tile is-parent is-12 container px-6 py-6">
             <div class="tile is-child card box">
+                <p class="dayone-date"></p>
+                <div class="content forecast one"></div>
+            </div>
+            <p class="daytwo-date"></p>
+            <div class="tile is-child card box two">
                 <div class="content forecast"></div>
             </div>
-            <div class="tile is-child card box">
+            <p class="daythree-date"></p>
+            <div class="tile is-child card box three">
                 <div class="content forecast"></div>
             </div>
-            <div class="tile is-child card box">
+            <p class="dayfour-date"></p>
+            <div class="tile is-child card box four">
                 <div class="content forecast"></div>
             </div>
-            <div class="tile is-child card box">
-                <div class="content forecast"></div>
-            </div>
-            <div class="tile is-child card box">
+            <p class="dayfive-date"></p>
+            <div class="tile is-child card box five">
                 <div class="content forecast"></div>
             </div>
         </div>
