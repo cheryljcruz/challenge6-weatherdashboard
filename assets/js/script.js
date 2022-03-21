@@ -16,10 +16,21 @@ var tempOne = document.querySelector(".one-temp");
 var windOne = document.querySelector(".one-wind");
 var humidOne = document.querySelector(".one-humid");
 //day two
-
+var tempTwo = document.querySelector(".two-temp");
+var windTwo = document.querySelector(".two-wind");
+var humidTwo = document.querySelector(".two-humid");
 //daythree
+var tempThree = document.querySelector(".three-temp");
+var windThree = document.querySelector(".three-wind");
+var humidThree = document.querySelector(".three-humid");
 //dayfour
+var tempFour = document.querySelector(".four-temp");
+var windFour = document.querySelector(".four-wind");
+var humidFour = document.querySelector(".four-humid");
 //dayfive
+var tempFive = document.querySelector(".five-temp");
+var windFive = document.querySelector(".five-wind");
+var humidFive = document.querySelector(".five-humid");
 
 
 // both api calls 
@@ -97,15 +108,46 @@ var currentWeather = function (data) {
 
 //five day forecast
 var fiveDayForecast = function (data) {
+    //dayone
     var dayonetemp = data.daily[0].temp.day;
     tempOne.textContent = dayonetemp;
     var dayonewind = data.daily[0].wind_speed;
     windOne.textContent = dayonewind;
     var dayonehumid = data.daily[0].humidity;
-    humidOne.textContent= dayonehumid;
+    humidOne.textContent = dayonehumid;
 
+    //daytwo
+    var daytwotemp = data.daily[1].temp.day;
+    tempTwo.textContent = daytwotemp;
+    var daytwowind = data.daily[1].wind_speed;
+    windTwo.textContent = daytwowind;
+    var daytwohumid = data.daily[1].humidity;
+    humidTwo.textContent = daytwohumid;
 
-}
+    // day three
+    var daythreetemp = data.daily[2].temp.day;
+    tempThree.textContent = daythreetemp;
+    var daythreewind = data.daily[2].wind_speed;
+    windThree.textContent = daythreewind;
+    var daythreehumid = data.daily[2].humidity;
+    humidThree.textContent = daythreehumid;
+
+    //day four
+    var dayfourtemp = data.daily[3].temp.day;
+    tempFour.textContent = dayfourtemp;
+    var dayfourwind = data.daily[3].wind_speed;
+    windFour.textContent = dayfourwind;
+    var dayfourhumid = data.daily[3].humidity;
+    humidFour.textContent = dayfourhumid;
+
+    //day five
+    var dayfivetemp = data.daily[4].temp.day;
+    tempFive.textContent = dayfivetemp;
+    var dayfivewind = data.daily[4].wind_speed;
+    windFive.textContent = dayfivewind;
+    var dayfivehumid = data.daily[4].wind_speed;
+    humidFive.textContent = dayfivehumid;
+};
 
 
 
