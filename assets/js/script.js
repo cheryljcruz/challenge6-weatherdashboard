@@ -153,5 +153,8 @@ var fiveDayForecast = function (data) {
 
 
 
+
+
+
 // add event listeners to form and button container
 cityForm.addEventListener("submit", formSubmitHandler);

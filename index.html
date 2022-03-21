@@ -13,7 +13,7 @@
 <body>
     <header class="hero is-med is-primary">
         <div class="hero-body">
-            <h1 class="title is-3 has-text-centered">
+            <h1 class="title is-1 has-text-centered">
                 Weather Dashboard
             </h1>
         </div>
@@ -31,13 +31,13 @@
                 </form>
             </article>
             <!--search history populates-->
-            <form id="history">
-                <div class="container search-history-one"></div>
-                <div class="container search-history-two"></div>
-                <div class="container search-history-three"></div>
-                <div class="container search-history-four"></div>
-                <div class="container search-history-five"></div>
-            </form>
+            <div class=" tile is-child box history">
+                <div class="container"><p id="search-history-0" class="box"></p></div>
+                <div class="container"><p id="search-history-1" class="box"></p></div>
+                <div class="container"><p id=" search-history-three" class="box"></p></div>
+                <div class="container"><p id=" search-history-four" class="box"></p></div>
+                <div class="container"><p id=" search-history-five" class="box"></p></div>
+            </div>
         </div>
         <!--Current city conditions-->
         <div class="tile is-parent container current-weather is-3 is-vertical mx-3 my-2">
@@ -66,7 +66,7 @@
     </section>
     <!-- Five Day Forecast -->
     <section class="tile is-ancestor box my-6">
-        <h1 class="title is-large is-4 has-text-centered">Five Day Forecast</h1>
+        <h1 class="title is-large is-3 has-text-centered">Five Day Forecast</h1>
         <div class="tile is-parent is-12 container px-6 py-6">
 
 
